@@ -45,7 +45,7 @@ const features = [
 
 export function Features() {
   return (
-    <section id="caracteristicas" className="snap-scroll-section flex items-center section-padding relative bg-black">
+    <section id="caracteristicas" className="section-padding relative bg-black">
       <div className="container mx-auto container-padding">
         <ScrollReveal>
           <div className="text-center mb-20 max-w-3xl mx-auto">
@@ -85,26 +85,53 @@ export function Features() {
                   </motion.div>
                 </div>
 
-                {/* Mockup */}
+                {/* Mockup with enhanced effects */}
                 <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} flex justify-center`}>
                   <motion.div
-                    whileHover={{ y: -8 }}
-                    transition={{ duration: 0.3 }}
-                    className="relative"
+                    initial={{ opacity: 0, scale: 0.9, y: 50 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    whileHover={{
+                      scale: 1.05,
+                      y: -12,
+                      rotateY: index % 2 === 0 ? 5 : -5
+                    }}
+                    className="relative group"
+                    style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
                   >
-                    {/* Subtle glow behind mockup */}
-                    <div className="absolute inset-0 flex justify-center items-center -z-10">
-                      <div className="w-[300px] h-[300px] bg-zinc-800/20 rounded-full blur-3xl"></div>
-                    </div>
+                    {/* Animated glow behind mockup */}
+                    <motion.div
+                      className="absolute inset-0 flex justify-center items-center -z-10"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.3, 0.5, 0.3]
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      <div className="w-[400px] h-[400px] bg-gradient-to-r from-white/10 to-zinc-500/20 rounded-full blur-3xl"></div>
+                    </motion.div>
+
+                    {/* Rim light on hover */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[60px] pointer-events-none"
+                         style={{
+                           background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%, rgba(255,255,255,0.08) 100%)',
+                           mixBlendMode: 'overlay'
+                         }}
+                    />
 
                     <Image
                       src={feature.mockup}
                       alt={`${feature.title} - Mockup`}
                       width={1419}
                       height={2796}
-                      className="w-auto h-[650px] md:h-[700px] object-contain"
+                      className="w-auto h-[650px] md:h-[700px] object-contain transition-transform duration-300"
                       style={{
-                        filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4))'
+                        filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 80px rgba(255, 255, 255, 0.05))'
                       }}
                     />
                   </motion.div>

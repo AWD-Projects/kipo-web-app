@@ -39,7 +39,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="snap-scroll-section flex items-center section-padding bg-black">
+    <section id="beneficios" className="min-h-screen flex items-center section-padding bg-black">
       <div className="container mx-auto container-padding">
         <ScrollReveal>
           <div className="text-center mb-20 max-w-3xl mx-auto">

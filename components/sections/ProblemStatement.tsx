@@ -29,7 +29,7 @@ const problems = [
 
 export function ProblemStatement() {
   return (
-    <section id="problema" className="snap-scroll-section flex items-center section-padding relative overflow-hidden bg-black">
+    <section id="problema" className="min-h-screen flex items-center section-padding relative overflow-hidden bg-black">
       <div className="container mx-auto container-padding relative z-10">
         <ScrollReveal>
           <div className="text-center mb-20 max-w-3xl mx-auto">

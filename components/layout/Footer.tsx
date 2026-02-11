@@ -7,7 +7,7 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="snap-scroll-section flex items-center border-t border-zinc-800 py-12 bg-black">
+        <footer className="border-t border-zinc-800 py-12 bg-black">
             <div className="container mx-auto container-padding">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                     {/* Logo & Description */}

@@ -163,6 +163,29 @@
   min-height: 100vh;
 }
 
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(24, 24, 27, 1) 25%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(39, 39, 42, 1) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
 @layer utilities {
   /* Glassmorphism utilities - Minimal style */
   .glass {

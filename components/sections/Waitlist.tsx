@@ -55,7 +55,7 @@ export function Waitlist() {
   }
 
   return (
-    <section id="waitlist" className="snap-scroll-section flex items-center section-padding relative overflow-hidden bg-black">
+    <section id="waitlist" className="min-h-screen flex items-center section-padding relative overflow-hidden bg-black">
       <div className="container mx-auto container-padding relative z-10">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-12">

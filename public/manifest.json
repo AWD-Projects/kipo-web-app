@@ -1,0 +1,21 @@
+{
+  "name": "Kipo - Tu compañero financiero inteligente",
+  "short_name": "Kipo",
+  "description": "Toma control de tus finanzas con presupuestos inteligentes, metas de ahorro y un coach IA personalizado.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

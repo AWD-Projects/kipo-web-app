@@ -8,7 +8,7 @@ const benefits = [
   {
     icon: Gift,
     title: '100% Gratis',
-    description: 'Sin cargos ocultos, sin tarjetas requeridas',
+    description: 'Sin cargos ocultos',
   },
   {
     icon: Shield,

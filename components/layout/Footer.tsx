@@ -1,9 +1,7 @@
 "use client";
 
-import { Twitter, Instagram, Music } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/lib/constants";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
